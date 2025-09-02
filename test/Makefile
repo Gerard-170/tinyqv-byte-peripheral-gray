@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = peripheral.v
+PROJECT_SOURCES = tqvp_gera_gray.v
 ADDITIONAL_SOURCES = tt_wrapper.v test_harness/*.sv
 
 ifneq ($(GATES),yes)
@@ -40,7 +40,7 @@ VERILOG_SOURCES += $(PWD)/tb.v
 TOPLEVEL = tb
 
 # MODULE is the basename of the Python test file
-MODULE = test
+MODULE = gray
 
 # include cocotb's make rules to take care of the simulator setup
 include $(shell cocotb-config --makefiles)/Makefile.sim

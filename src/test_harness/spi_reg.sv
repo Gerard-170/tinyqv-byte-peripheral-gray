@@ -33,6 +33,10 @@ module spi_reg #(
   logic spi_clk_pos;
   logic spi_clk_neg;
 
+  // Addr and Read/Write Command register
+  logic [ADDR_W-1:0] addr;
+  logic reg_rw;
+
   // Pulse on rising edge of spi_clk
   rising_edge_detector rising_edge_detector_spi_clk (.rstb(rstb), .clk(clk), .ena(ena), .data(spi_clk), .pos_edge(spi_clk_pos));
   // Pulse on falling edge of spi_clk
@@ -180,9 +184,7 @@ module spi_reg #(
     end
   end
 
-  // Addr and Read/Write Command register
-  logic [ADDR_W-1:0] addr;
-  logic reg_rw;
+
 
   // Addr and Read/Write Command Registers
   always_ff @(negedge(rstb) or posedge(clk)) begin

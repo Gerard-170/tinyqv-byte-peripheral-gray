@@ -34,9 +34,9 @@ async def test_project(dut):
     dut._log.info("Test project behavior")
 
     # Test register write and read back
-    await tqv.write_reg(2, 30)
+    await tqv.write_reg(1, 20)
 
-    assert await tqv.read_reg(2) == 20
+    assert await tqv.read_reg(1) == 30
 
     # Set an input value, in the example this will be added to the register value
     #dut.ui_in.value = 54
@@ -47,7 +47,7 @@ async def test_project(dut):
 
     # The following assertion is just an example of how to check the output values.
     # Change it to match the actual expected output of your module:
-    assert dut.uo_out.value == 20
+    assert dut.uo_out.value == 30
     print("end")
 
     # Keep testing the module by changing the input values, waiting for

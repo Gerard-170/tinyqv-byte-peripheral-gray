@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
-project: "Gray Coder/Decoder peripheral"
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+project: 
+  title:        "Gray Coder/Decoder peripheral"      # Project title
+  author:       "Gerardo Huerta"      # Your name
+  discord:      "ghuerta170"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This a Gray coder/decoder for 1 byte data"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     64000000  # Clock frequency in Hz (or 0 if not applicable)
 
